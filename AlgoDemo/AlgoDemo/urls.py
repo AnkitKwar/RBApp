@@ -17,13 +17,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from AlgoDemo.AlgoDemoApp import views
 #from AlgoDemo import AlgoDemoApp
 
 
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('', include('AlgoDemoApp.urls'))
+    path('', include('AlgoDemoApp.urls')),
+    path('regex/', views.regex_topics, name='regex_topics')
 
 
 
