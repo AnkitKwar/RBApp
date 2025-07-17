@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.http import Http404
 
 # Create your views here.
 
@@ -16,3 +17,8 @@ def regex_topics(request):
         ('Regex Cheatsheet', '/regex/cheatsheet'),
     ]
     return render(request, 'regex_topics.html', {'topics': topics})
+
+def topic_detail(request, topic_name):
+    if topic_name not in ['anchors', 'quantifiers']:
+        raise Http404("Topic not found")
+    return render(request, 'topic_detail.html', {'topic': topic_name})

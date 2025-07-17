@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1_n_khad%qnd6@!&%uwpyu89#0s()mju(ws#6yoa+3cn2hs2lt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['rbapp-ucgj.onrender.com','127.0.0.1']
 
